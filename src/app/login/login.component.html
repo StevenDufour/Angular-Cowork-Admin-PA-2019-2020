@@ -1,0 +1,17 @@
+<h1 align="center">Connexion</h1>
+
+<div>
+  <p id="errorLogin" *ngIf="errorLogin">Les identifiants ne sont pas corrects</p>
+</div>
+
+<form [formGroup]="login">
+
+  <label for="email">Email</label>
+  <input type="text" id="email" formControlName="email">
+
+  <label for="password">Password</label>
+  <input type="password" id="password" formControlName="password">
+
+  <button id="submit" (click)="onSubmit()">Connexion</button>
+
+</form>

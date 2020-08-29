@@ -1,0 +1,50 @@
+<div id="back">
+  <button id="backButton" mat-raised-button routerLink="../" routerLinkActive="active">Retour</button>
+</div>
+
+<div align="center">
+
+  <h1>Ajouter un service</h1>
+
+  <div align="center">
+    <p id="errorProduct" *ngIf="errorService" style="color: darkred">Il manque un ou des champs.</p>
+    <p id="validateProduct" *ngIf="validateService" style="color: darkgreen">Le service a été crée avec succès.</p>
+  </div>
+
+  <form [formGroup]="service">
+
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label for="name">Nom</mat-label>
+      <input type="text" id="name" matInput formControlName="name">
+    </mat-form-field>
+    <br>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label for="type">Type</mat-label>
+      <input type="text" id="type" matInput formControlName="type">
+    </mat-form-field>
+    <br>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label for="amount">Quantité</mat-label>
+      <input type="number" id="amount" matInput formControlName="amount">
+    </mat-form-field>
+    <br>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label for="description">Description</mat-label>
+      <textarea type="text" id="description" matInput formControlName="description"></textarea>
+    </mat-form-field>
+    <br>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label for="price">Prix</mat-label>
+      <input type="text" id="price" matInput formControlName="price">
+    </mat-form-field>
+    <br>
+
+
+    <button id="submit" mat-raised-button (click)="onSubmit()">Ajouter</button>
+
+  </form>
+</div>

@@ -1,0 +1,45 @@
+<div id="back">
+  <button id="backButton" mat-raised-button routerLink="../../../event" routerLinkActive="active">Retour</button>
+</div>
+
+<div align="center">
+
+  <h1>Modifier un évènement</h1>
+
+  <div align="center">
+    <p id="errorProduct" *ngIf="errorEvent" style="color: darkred">Il manque un ou des champs.</p>
+    <p id="validateProduct" *ngIf="validateEvent" style="color: darkgreen">L'évènement a été modifié avec succès.</p>
+  </div>
+
+  <form [formGroup]="event">
+
+    <input hidden type="number" id="id" formControlName="id" ngModel="{{events.id}}">
+
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label for="name">Nom</mat-label>
+      <input type="text" id="name" matInput formControlName="name" ngModel="{{events.name}}">
+    </mat-form-field>
+    <br>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label for="description">Description</mat-label>
+      <textarea type="text" id="description" matInput formControlName="description" ngModel="{{events.description}}"></textarea>
+    </mat-form-field>
+    <br>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label for="amount">Nombre de personne</mat-label>
+      <input type="number" id="amount" matInput formControlName="amount" ngModel="{{events.amount}}">
+    </mat-form-field>
+    <br>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label for="type">Type</mat-label>
+      <input type="text" id="type" matInput formControlName="type" ngModel="{{events.type}}">
+    </mat-form-field>
+    <br>
+
+    <button id="submit" mat-raised-button (click)="onSubmit()">Modifier</button>
+
+  </form>
+</div>
