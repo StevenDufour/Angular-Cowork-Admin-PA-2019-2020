@@ -11,6 +11,7 @@ import {EventCreateComponent} from './event-home/event-create/event-create.compo
 import {EventUpdateComponent} from './event-home/event-update/event-update.component';
 import {ServiceCreateComponent} from './service-home/service-create/service-create.component';
 import {ServiceUpdateComponent} from './service-home/service-update/service-update.component';
+import {UserComponent} from './user-home/user/user.component';
 
 
 const routes: Routes = [
@@ -24,7 +25,8 @@ const routes: Routes = [
   { path: 'event/update/:id', component: EventUpdateComponent },
   { path: 'service', component: ServiceComponent },
   { path: 'service/create', component: ServiceCreateComponent },
-  { path: 'service/update/:id', component: ServiceUpdateComponent }
+  { path: 'service/update/:id', component: ServiceUpdateComponent },
+  { path: 'user', component: UserComponent }
 ];
 
 @NgModule({

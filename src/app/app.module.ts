@@ -23,6 +23,7 @@ import {HttpClientModule} from '@angular/common/http';
 import {MatListModule} from '@angular/material/list';
 import {MatTableModule} from '@angular/material/table';
 import {MatIconModule} from '@angular/material/icon';
+import { UserComponent } from './user-home/user/user.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import {MatIconModule} from '@angular/material/icon';
     ProductCreateComponent,
     ProductUpdateComponent,
     ServiceCreateComponent,
-    ServiceUpdateComponent
+    ServiceUpdateComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,
