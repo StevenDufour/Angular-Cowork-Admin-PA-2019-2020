@@ -32,7 +32,15 @@
 
       <ng-container matColumnDef="subscription">
         <th mat-header-cell *matHeaderCellDef> Abonnement </th>
-        <td mat-cell *matCellDef="let element"> {{element.subscription}} </td>
+        <td mat-cell *matCellDef="let element">
+          <span *ngIf="element.subscription != null">{{element.subscription}}</span>
+          <span *ngIf="element.subscription == null">Sans abonnement</span>
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="update" >
+        <th mat-header-cell *matHeaderCellDef>  </th>
+        <td mat-cell *matCellDef="let element"><mat-icon *ngIf="element.type != 'Admin'" [routerLink]="['update', element.id]" routerLinkActive="active">edit</mat-icon></td>
       </ng-container>
 
       <ng-container matColumnDef="delete" >

@@ -12,6 +12,9 @@ import {EventUpdateComponent} from './event-home/event-update/event-update.compo
 import {ServiceCreateComponent} from './service-home/service-create/service-create.component';
 import {ServiceUpdateComponent} from './service-home/service-update/service-update.component';
 import {UserComponent} from './user-home/user/user.component';
+import {SubComponent} from './sub-home/sub/sub.component';
+import {SubCreateComponent} from './sub-home/sub-create/sub-create.component';
+import {SubUpdateComponent} from './sub-home/sub-update/sub-update.component';
 
 
 const routes: Routes = [
@@ -26,7 +29,10 @@ const routes: Routes = [
   { path: 'service', component: ServiceComponent },
   { path: 'service/create', component: ServiceCreateComponent },
   { path: 'service/update/:id', component: ServiceUpdateComponent },
-  { path: 'user', component: UserComponent }
+  { path: 'user', component: UserComponent },
+  { path: 'sub', component: SubComponent },
+  { path: 'sub/create', component: SubCreateComponent },
+  { path: 'sub/update/:id', component: SubUpdateComponent }
 ];
 
 @NgModule({

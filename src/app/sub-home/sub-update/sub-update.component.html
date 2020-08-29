@@ -1,0 +1,69 @@
+<div id="back">
+  <button id="backButton" mat-raised-button routerLink="../../../sub" routerLinkActive="active">Retour</button>
+</div>
+
+<div align="center">
+
+  <h1>Modifier un abonnement</h1>
+
+  <div align="center">
+    <p id="errorProduct" *ngIf="errorSub" style="color: darkred">Il manque un ou des champs.</p>
+    <p id="validateProduct" *ngIf="validateSub" style="color: darkgreen">L'abonnement a été modifié avec succès.</p>
+  </div>
+
+  <form [formGroup]="sub">
+
+    <input hidden type="number" id="id" formControlName="id" ngModel="{{subs.id}}">
+
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label for="name">Nom</mat-label>
+      <input type="text" id="name" matInput formControlName="name" ngModel="{{subs.name}}">
+    </mat-form-field>
+    <br>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label for="description">Description</mat-label>
+      <textarea type="text" id="description" matInput formControlName="description" ngModel="{{subs.description}}"></textarea>
+    </mat-form-field>
+    <br>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label for="firstHour">Première heure</mat-label>
+      <input type="text" id="firstHour" matInput formControlName="firstHour" ngModel="{{subs.firstHour}}">
+    </mat-form-field>
+    <br>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label for="nextHalfHour">Demi-heure suivante</mat-label>
+      <input type="text" id="nextHalfHour" matInput formControlName="nextHalfHour" ngModel="{{subs.nextHalfHour}}">
+    </mat-form-field>
+    <br>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label for="dayPrice">Journée</mat-label>
+      <input type="text" id="dayPrice" matInput formControlName="dayPrice" ngModel="{{subs.dayPrice}}">
+    </mat-form-field>
+    <br>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label for="withoutEngagement">Sans engagement</mat-label>
+      <input type="text" id="withoutEngagement" matInput formControlName="withoutEngagement" ngModel="{{subs.withoutEngagement}}">
+    </mat-form-field>
+    <br>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label for="withEngagement">Avec engagement</mat-label>
+      <input type="text" id="withEngagement" matInput formControlName="withEngagement" ngModel="{{subs.withEngagement}}">
+    </mat-form-field>
+    <br>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label for="numberOfEngagementMonth">Nombre de mois d'engagement</mat-label>
+      <input type="text" id="numberOfEngagementMonth" matInput formControlName="numberOfEngagementMonth" ngModel="{{subs.numberOfEngagementMonth}}">
+    </mat-form-field>
+    <br>
+
+    <button id="submit" mat-raised-button (click)="onSubmit()">Modifier</button>
+
+  </form>
+</div>

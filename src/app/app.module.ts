@@ -24,6 +24,9 @@ import {MatListModule} from '@angular/material/list';
 import {MatTableModule} from '@angular/material/table';
 import {MatIconModule} from '@angular/material/icon';
 import { UserComponent } from './user-home/user/user.component';
+import { SubComponent } from './sub-home/sub/sub.component';
+import { SubCreateComponent } from './sub-home/sub-create/sub-create.component';
+import { SubUpdateComponent } from './sub-home/sub-update/sub-update.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +42,10 @@ import { UserComponent } from './user-home/user/user.component';
     ProductUpdateComponent,
     ServiceCreateComponent,
     ServiceUpdateComponent,
-    UserComponent
+    UserComponent,
+    SubComponent,
+    SubCreateComponent,
+    SubUpdateComponent
   ],
   imports: [
     BrowserModule,
