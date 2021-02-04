@@ -48,14 +48,14 @@ export class LoginComponent implements OnInit {
       this.errorLogin = false;
 
 
-      this.authService.login(formData).subscribe( value => {
+      /*this.authService.login(formData).subscribe( value => {
           if (localStorage.getItem('authorization') != null) {
             localStorage.clear();
           }
           localStorage.setItem('authorization', 'Bearer ' + value.Sessions[0].token);
         },
         error => this.loginError = 'Error ' + error.status + ': ' + error.statusText,
-        complete => this.router.navigate(['home']));
+        complete => this.router.navigate(['home']));*/
     }
   }
 
