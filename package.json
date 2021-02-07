@@ -21,8 +21,13 @@
     "@angular/platform-browser": "~10.0.4",
     "@angular/platform-browser-dynamic": "~10.0.4",
     "@angular/router": "~10.0.4",
+    "cfenv": "^1.2.3",
     "express": "^4.17.1",
+    "extend": "^3.0.2",
     "rxjs": "~6.5.5",
+    "s3-lister": "^0.1.0",
+    "skipper": "^0.8.7",
+    "skipper-s3": "^0.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.3"
   },
