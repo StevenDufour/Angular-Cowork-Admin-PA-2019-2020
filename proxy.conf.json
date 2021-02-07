@@ -1,8 +1,0 @@
-{
-  "/api/*": {
-    "target": "https://cowork-node-cloud-project.herokuapp.com",
-    "secure": false,
-    "logLevel": "debug",
-    "changeOrigin": true
-  }
-}

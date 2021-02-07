@@ -7,27 +7,29 @@ import {Observable} from 'rxjs';
 })
 export class ProductService {
 
+  private http = 'https://cowork-node-cloud-project.herokuapp.com';
+
   constructor(private httpClient: HttpClient) { }
 
   createProduct(formData): Observable<any> {
-    return this.httpClient.post<any>('/api/product/create', formData, {
+    return this.httpClient.post<any>(this.http + '/api/product/create', formData, {
       responseType: 'json'
     });
   }
 
   getById(id): Observable<any> {
-    return this.httpClient.get<any>('/api/product/getById/' + id);
+    return this.httpClient.get<any>(this.http + '/api/product/getById/' + id);
   }
 
   getAllProducts(): Observable<any> {
-    return this.httpClient.get<any>('/api/product/getAll');
+    return this.httpClient.get<any>(this.http + '/api/product/getAll');
   }
 
   deleteProduct(id): Observable<any> {
-    return this.httpClient.delete<any>('/api/product/delete/' + id);
+    return this.httpClient.delete<any>(this.http + '/api/product/delete/' + id);
   }
 
   updateProduct(formData): Observable<any> {
-    return this.httpClient.put<any>('/api/product/update', formData);
+    return this.httpClient.put<any>(this.http + '/api/product/update', formData);
   }
 }
